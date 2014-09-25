@@ -5,7 +5,7 @@ use Bakeoff\Resources\Lists\Finder;
 use Bakeoff\Resources\Lists\Transformer;
 use League\Fractal\Manager;
 
-class ListsController extends ResourceController implements ResourceControllerInterface
+class CategoriesController extends ResourceController implements ResourceControllerInterface
 {
     protected $finder;
 
