@@ -1,5 +1,6 @@
 <?php
 
+Route::get('/', 'ItemsController@index');
 Route::group(['prefix' => 'lists'], function()
 {
     Route::get('/{id}', 'ItemsController@show');
