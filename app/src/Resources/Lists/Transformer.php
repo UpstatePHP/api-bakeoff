@@ -6,11 +6,13 @@ use Bakeoff\Resources\Lists\Model as ListModel;
 class Transformer extends TransformerAbstract
 {
     protected $availableIncludes = [
-        'items'
+        'items',
+        'owner'
     ];
 
     protected $defaultIncludes = [
-        'items'
+        'items',
+        'owner'
     ];
 
     public function transform(ListModel $list)
@@ -26,5 +28,10 @@ class Transformer extends TransformerAbstract
         $items = $list->items;
 
         return $this->collection($items, new \Bakeoff\Resources\Items\Transformer);
+    }
+
+    public function includeOwner(ListModel $list)
+    {
+        return $this->item($list->owner, new \Bakeoff\Resources\Users\Transformer);
     }
 }

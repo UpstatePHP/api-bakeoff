@@ -16,4 +16,9 @@ class Model extends BaseModel
     {
         return $this->hasMany('\Bakeoff\Resources\Items\Model', 'list_id');
     }
+
+    public function owner()
+    {
+        return $this->belongsTo('\Bakeoff\Resources\Users\Model', 'owner_id');
+    }
 }
