@@ -19,6 +19,17 @@ Route::group(['prefix' => 'lists'], function()
     Route::post('/{id}/items', 'ItemsController@create');
 });
 
+Route::group(['prefix' => 'categories'], function()
+{
+    Route::get('/', 'CategoriesController@listAll');
+    Route::get('/{id}', 'CategoriesController@show');
+    Route::post('/', 'CategoriesController@create');
+    Route::put('/{id}', 'CategoriesController@update');
+    Route::delete('/{id}', 'CategoriesController@delete');
+
+    Route::post('/{id}/categories', 'CategoriesController@create');
+});
+
 App::error(function(\Bakeoff\Exceptions\ValidationFailed $e)
 {
     return Response::make(400, $e->getErrors());
