@@ -2,7 +2,7 @@
 
 /* App Module */
 
-var todoApp - angular.module('todoApp' [
+var todoApp = angular.module('todoApp', [
     'ngRoute',
     'ngSanitize',
     'ngCookies',
@@ -50,7 +50,7 @@ todoApp.config(function ($httpProvider) {
     $httpProvider.interceptors.push('authInterceptor');
 });
 
-
+var todoControllers = angular.module('todoControllers', []);
 /* Controllers */
 todoControllers.controller('navbar', ['$scope', '$window', '$location',
     function($scope, $window, $location){
