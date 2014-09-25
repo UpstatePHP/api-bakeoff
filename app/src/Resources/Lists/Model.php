@@ -14,6 +14,6 @@ class Model extends BaseModel
 
     public function items()
     {
-        return $this->hasMany('\Bakeoff\Resources\Items\Model');
+        return $this->hasMany('\Bakeoff\Resources\Items\Model', 'list_id');
     }
 }
