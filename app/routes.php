@@ -6,7 +6,7 @@ Route::group(['prefix' => 'lists'], function()
     Route::post('/', 'ItemsController@create');
     Route::put('/{id}', 'ItemsController@update');
     Route::delete('/{id}', 'ItemsController@delete');
-})
+});
 
 Route::group(['prefix' => 'lists'], function()
 {
