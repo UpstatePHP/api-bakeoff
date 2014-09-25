@@ -9,7 +9,11 @@ class Transformer extends TransformerAbstract
     {
         return [
             'id' => $item->id,
-            'title' => $item->title
+            'title' => $item->title,
+            'completed' => (bool) $item->completed,
+            'dueDate' => (string) $item->due_date,
+            'dateCreated' => (string) $item->created_at,
+            'dateUpdated' => (string) $item->updated_at
         ];
     }
 }

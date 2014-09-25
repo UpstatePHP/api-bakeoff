@@ -11,7 +11,7 @@ class ResourceController extends Controller
         $lists = $this->finder->getResults();
         $resource = new Collection($lists, $this->transformer);
 
-        return $this->fractal->createData($resource)->toArray();;
+        return $this->fractal->createData($resource)->toArray();
     }
 
     public function show($id)

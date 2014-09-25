@@ -4,6 +4,8 @@ use Bakeoff\Contracts\ResourceControllerInterface;
 use Bakeoff\Resources\Items\Finder;
 use Bakeoff\Resources\Items\Transformer;
 use League\Fractal\Manager;
+use League\Fractal\Resource\Collection;
+use League\Fractal\Resource\Item;
 use Bakeoff\Resources\Lists\Model as ListModel;
 
 class ItemsController extends ResourceController implements ResourceControllerInterface
@@ -27,7 +29,7 @@ class ItemsController extends ResourceController implements ResourceControllerIn
         $this->transformer = $transformer;
     }
 
-    public function create($listId)
+    public function createAndAttach($listId)
     {
         $list = ListModel::find($listId);
 

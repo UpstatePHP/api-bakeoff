@@ -16,7 +16,7 @@ Route::group(['prefix' => 'lists'], function()
     Route::put('/{id}', 'ListsController@update');
     Route::delete('/{id}', 'ListsController@delete');
 
-    Route::post('/{id}/items', 'ItemsController@create');
+    Route::post('/{id}/items', 'ItemsController@createAndAttach');
 });
 
 App::error(function(\Bakeoff\Exceptions\ValidationFailed $e)
