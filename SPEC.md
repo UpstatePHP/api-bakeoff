@@ -6,7 +6,6 @@
     assignedto: userid
     title: text
     completed: bool
-    category: catid
     tags: [ tagids ]
     due: date
     notes: text
@@ -19,6 +18,7 @@
     owner: userid
     title: text
     items: [item ids]
+    category: catid
 }
 ```
 ### todo category
