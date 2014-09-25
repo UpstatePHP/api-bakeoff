@@ -10,6 +10,7 @@
     <title>Bake Off</title>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/lodash/dist/lodash.min.js"></script>
     <script src="bower_components/angularjs/angular.min.js"></script>
     <script src="bower_components/moment/min/moment.min.js"></script>
     <script src="js/todoapp.js"></script>
