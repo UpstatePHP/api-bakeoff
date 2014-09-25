@@ -34,7 +34,7 @@
     </div>
 
     <div class="container" ng-view>
-
+        
       <div class="starter-template">
         <h1>Bakeoff Lists</h1>
         <p class="lead">Lists here.</p>
