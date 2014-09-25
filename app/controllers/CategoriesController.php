@@ -1,8 +1,8 @@
 <?php
 
 use Bakeoff\Contracts\ResourceControllerInterface;
-use Bakeoff\Resources\Lists\Finder;
-use Bakeoff\Resources\Lists\Transformer;
+use Bakeoff\Resources\Categories\Finder;
+use Bakeoff\Resources\Categories\Transformer;
 use League\Fractal\Manager;
 
 class CategoriesController extends ResourceController implements ResourceControllerInterface

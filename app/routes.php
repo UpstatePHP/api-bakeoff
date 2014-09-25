@@ -1,5 +1,8 @@
 <?php
-
+Route::get('/', function()
+{
+    return 'Home Page Here';
+});
 Route::group(['prefix' => 'items'], function()
 {
     Route::get('/', 'ItemsController@listAll');
