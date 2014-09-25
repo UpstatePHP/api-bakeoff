@@ -2,6 +2,7 @@
 ```
 {
     id: int
+    list: listid
     owner: userid
     assignedto: userid
     title: text
